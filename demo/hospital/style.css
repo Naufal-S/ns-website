@@ -1,0 +1,459 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #183047;
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #123b66;
+}
+
+.logo span {
+  color: #19a7a0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #159c97;
+}
+
+.nav-btn,
+.primary-btn {
+  background: #159c97;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn:hover,
+.nav-btn:hover {
+  background: #107d79;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.tagline {
+  color: #159c97;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #153450;
+}
+
+.hero h1 span {
+  color: #159c97;
+}
+
+.hero-content > p:not(.tagline) {
+  color: #64748b;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.secondary-btn {
+  border: 1px solid #159c97;
+  color: #159c97;
+  padding: 11px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.hero-info {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-info h3 {
+  color: #159c97;
+  font-size: 22px;
+}
+
+.hero-info p {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.section {
+  padding: 80px 5%;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.section-heading h2,
+.appointment h2 {
+  color: #153450;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+  color: #64748b;
+}
+
+.about {
+  background: #f4f9fc;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-content h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.about-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.about-card h3 {
+  color: #159c97;
+}
+
+.about-card p {
+  padding: 10px 0;
+  border-bottom: 1px solid #edf2f7;
+  margin: 0;
+}
+
+.department-grid,
+.doctor-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.department-card {
+  padding: 30px;
+  border: 1px solid #e7eef4;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.department-icon {
+  font-size: 32px;
+  color: #159c97;
+  margin-bottom: 15px;
+}
+
+.department-card h3 {
+  margin-bottom: 10px;
+}
+
+.department-card p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.doctors {
+  background: #f4f9fc;
+}
+
+.doctor-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.doctor-info {
+  padding: 20px;
+}
+
+.doctor-info p {
+  color: #159c97;
+  margin: 5px 0;
+}
+
+.doctor-info span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.appointment {
+  background: #153450;
+  color: white;
+}
+
+.appointment-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.appointment h2 {
+  color: white;
+}
+
+.appointment-content > div > p:last-child {
+  color: #c7d7e5;
+}
+
+form {
+  background: white;
+  color: #183047;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce5ed;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #159c97;
+}
+
+.contact-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.contact-grid > div {
+  padding: 25px;
+  background: #f4f9fc;
+  border-radius: 10px;
+}
+
+.contact-grid p {
+  color: #64748b;
+}
+
+footer {
+  background: #102b43;
+  color: white;
+  text-align: center;
+  padding: 35px 5%;
+}
+
+footer .logo {
+  color: white;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #c7d7e5;
+}
+
+footer a:not(.logo) {
+  color: #7ee0d8;
+}
+
+.demo-warning {
+  color: #ffd98a;
+}
+
+@media (max-width: 850px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero,
+  .about-content,
+  .appointment-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+
+  .department-grid,
+  .doctor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .department-grid,
+  .doctor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .section-heading h2,
+  .appointment h2 {
+    font-size: 29px;
+  }
+
+  .hero-info {
+    gap: 18px;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+}
